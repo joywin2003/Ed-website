@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/fonts/UbuntuMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/fonts/UbuntuMono-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/fonts/UbuntuMono-Italic.ttf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/fonts/UbuntuMono-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+#greetings-box {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    overflow-wrap: normal;
+    align-items: center;
+}
+
+#greetings-box.hidden { 
+    display: none;
+}
+
+#greetings-text-box {
+    height: 70vh;
+    width: 80vw;
+    z-index: 11;
+    font-family: "Ubuntu Mono";
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#greetings-text-box::-webkit-scrollbar {
+    display: none;
+}
+
+#greetings-text-box p{
+    color: white;
+    font-size: 1.85em;
+}
+
+#progress-bar {
+    color: green;
+}
+
+@media screen and (max-width: 1200px) {
+    #greetings-text-box {
+        height: 80vh;
+        width: 80vw;
+    }
+
+    #greetings-text-box {
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #greetings-text-box {
+        height: 90vh;
+        width: 80vw;
+    }
+}

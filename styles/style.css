@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gandhi Sans';
+    src: url('/fonts/GandhiSans-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Gandhi Sans';
+    src: url('/fonts/GandhiSans-Bold.otf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Gandhi Sans';
+    src: url('/fonts/GandhiSans-Italic.otf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gandhi Sans';
+    src: url('/fonts/GandhiSans-BoldItalic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    background: rgb(96,63,139);
+    background: linear-gradient(69deg, rgba(96,63,139,1) 0%, rgba(161,106,232,1) 43%, rgba(161,106,232,1) 56%, rgba(253,73,160,1) 100%);
+    margin: 0 auto;
+}
+
+#header-box {
+    padding: 30px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    width: 100vw;
+}
+
+#container {
+    font-family: "Gandhi Sans", sans-serif;
+    background: url("/images/background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+#container.hidden {
+    display: none;
+}
+
+#container p {
+    font-size: 1.25em;
+}
+
+#polygons {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.spacer {
+    height: 180px;
+}
+
+.float {
+    z-index: 5;
+}
+
+.blur {
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 15px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+header {
+    width: 80vw;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: pop 0.5s ease-out;
+}
+
+#header-box ul {
+    list-style-type: none;
+}
+
+#header-box ul li {
+    display: inline;
+}
+
+#header-box a {
+    font-size: medium;
+    padding: 12px 15px;
+    border-radius: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #FD49A0;
+    background: white;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+
+#header-box a:hover {
+    color: white;
+    background: #FD49A0;
+}
+
+#header-box h1{
+    color: white;
+    font-size: 3em;
+}
+
+@keyframes pop {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#objectives {
+    width: 1100px;
+    color: white;
+    text-align: left;
+}
+
+#objectives a {
+    color: #fff;
+}
+
+.heading {
+    color: white;
+    font-size: 2.3em;
+    text-align: center;
+}
+
+#objectives ul {
+    font-size: 1.25em;
+    padding-left: 15px;
+}
+
+#council {
+    width: 1100px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#council-banner {
+    color: white;
+    font-size: 4em;
+    line-height: 30px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.card{
+    width: 90%;
+    max-width: 440px;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 35px;
+    margin: 15px;
+    line-height: 8px;
+}
+
+.card img{
+    width: 140px;
+    border-radius: 50px;
+    clip-path: circle();
+}
+
+footer {
+    width: 80vw;
+    text-align: center;
+    font-family: "Ubuntu Mono", monospace;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+footer a {
+    color: #fff;
+    margin-top: -5px;
+    font-size: 0.75em;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {
+    #header-box {
+        padding: 15px 0px;
+    }
+
+    #header-box ul {
+        display: none;
+    }
+    
+    #header-box h1{
+        font-size: 2em;
+    }
+
+    #container {
+        background-size: fill;
+        background: rgb(96,63,139);
+        background: linear-gradient(69deg, rgba(96,63,139,1) 0%, rgba(161,106,232,1) 43%, rgba(161,106,232,1) 56%, rgba(253,73,160,1) 100%);
+    }
+
+    #polygons {
+        display: none;
+    }
+
+    .spacer {
+        height: 90px;
+    }
+
+    header {
+        width: 90vw;
+        padding: 0px 30px;
+        justify-content: center;
+    }
+
+    .heading {
+        font-size: 1.75em;
+    }
+
+    #objectives {
+        width: 100%;
+        padding: 30px;
+    }
+
+    #council-banner {
+        font-size: 1.75em;
+    }
+
+    #council {
+        width: 100%;
+    }
+
+    footer {
+        width: 90vw;
+    }
+}
